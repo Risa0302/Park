@@ -1,0 +1,21 @@
+★base.htmlを引用していくよ
+{% extends "base.html" %}
+{% block content %}
+
+{% endblock %}
+
+★SQLと接続して情報を取得する
+# flasktest.dbに接続するよ
+    conn = sqlite3.connect("db名")
+    # flaskからdbを操作できるようにするよ
+    c = conn.cursor()
+    # SQL文の実行 ""の中に記述
+    c.execute("select name,age,address from users where id = 1")
+    # SQL文を実行した際に取得したデータを格納
+    # c.fetchoneはレコードの１つを取得するときに使う
+    user_info = c.fetchone()
+    # 接続終了
+    c.close()
+
+    情報の書き換えは下記を追加
+    conn.commit()
