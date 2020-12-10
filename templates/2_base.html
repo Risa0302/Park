@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS読み込み -->
+    <link rel="stylesheet" href="../static/css/style.css">
 
     <title>サイト名を入力します</title>
 </head>
+
 <body>
     <!-- 地域で選ぶと年齢から選ぶのHTMLを記述してください -->
-    <!-- header　固定部分です -->
-    
+    <!-- header 固定部分です -->
+    <header>
+        <h1>ちいきでえらぶ</h1>
+            <button>やつしろ</button>
+            <button>かがみ</button>
+            <button>せんちょう</button>
+            <button>さかもと</button>
+            <button>とうよう</button>
+            <button>いずみ</button>
+        <h1>ねんれいからえらぶ</h1>
+            <button>０～３さい</button>
+            <button>４～６さい</button>
+            <button>小学校１～３年生</button>
+            <button>小学校４～６年生</button>
+            <button>中学生</button>
+        
+        
+    </header>
 
-    <!-- 共通テンプレートのおまじない　始まり -->
+    <!-- 共通テンプレートのおまじない 始まり -->
     {% block content %}
     <!-- ここから以下にメインの内容を記述。おすすめ公園一覧HTMLを記述 -->
-    
+
     {% endblock %}
     <!-- ここまで　-->
 
     <!-- footer　の記述をしてください -->
 
 </body>
+
 </html>
